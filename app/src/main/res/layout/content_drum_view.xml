@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="uk.ac.brighton.as1189.drumpad.drum_view"
+    tools:showIn="@layout/activity_drum_view">
+
+
+    <Button
+        android:id="@+id/padTrigger1"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/padTrigger2"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toStartOf="@+id/padTrigger3"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/padTrigger1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/padTrigger3"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/padTrigger4"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger1" />
+
+    <Button
+        android:id="@+id/padTrigger5"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toStartOf="@+id/padTrigger6"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/padTrigger4"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger2" />
+
+    <Button
+        android:id="@+id/padTrigger6"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger3" />
+
+    <Button
+        android:id="@+id/padTrigger7"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger4" />
+
+    <Button
+        android:id="@+id/padTrigger8"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toStartOf="@+id/padTrigger9"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/padTrigger7"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger5" />
+
+    <Button
+        android:id="@+id/padTrigger9"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger6" />
+
+    <Button
+        android:id="@+id/padTrigger10"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger7" />
+
+    <Button
+        android:id="@+id/padTrigger11"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toStartOf="@+id/padTrigger12"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/padTrigger10"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger8" />
+
+    <Button
+        android:id="@+id/padTrigger12"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTriggerPad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger9" />
+
+    <!--<ListView-->
+        <!--android:id="@+id/soundListView1"-->
+        <!--android:layout_width="96dp"-->
+        <!--android:layout_height="24dp"-->
+        <!--android:layout_marginStart="24dp"-->
+        <!--android:layout_marginTop="6dp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--tools:listitem="kicksound" />-->
+
+</android.support.constraint.ConstraintLayout>
