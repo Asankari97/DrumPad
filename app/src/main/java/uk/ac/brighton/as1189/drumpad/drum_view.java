@@ -7,42 +7,82 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class drum_view extends AppCompatActivity {
+
+//    declare buttons
+
     public Button padTrigger1, padTrigger2, padTrigger3, padTrigger4,
             padTrigger5, padTrigger6, padTrigger7, padTrigger8, padTrigger9,
             padTrigger10, padTrigger11, padTrigger12;
-//    public ListView soundListView = findViewById(R.id.soundListView1);
-//    public final TextView sampleName1 = findViewById(R.id.sampleName1);
+//    public ListView soundListView1, soundListView2, soundListView3, soundListView4, soundListView5,
+//            soundListView6, soundListView7, soundListView8, soundListView9, soundListView10,
+//            soundListView11, soundListView12;
+    public Spinner soundSpinner1, SoundSpinner2, soundSpinner3;
+    int padTriggerClip1, padTriggerClip2, padTriggerClip3;
+    MediaPlayer PT1, PT2, PT3, PT4, PT5, PT6, PT7, PT8, PT9, PT10, PT11, PT12;
+
+    //    public final TextView sampleName1 = findViewById(R.id.sampleName1);
 //    String soundFileName = "kicksound";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_drum_view);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        soundSpinner1 = findViewById(R.id.soundSpinner1);
+//        soundListView1 = findViewById(R.id.soundListView1);
+        List<String> soundList1 = new ArrayList<>();
+        soundList1.add("kicksound");
+        soundList1.add("snaresound");
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_dropdown_item_1line,
+                soundList1 );
+
+        soundSpinner1.setAdapter(arrayAdapter);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        String clipname = "kicksound";
-        final int padTriggerClip1 = getResources().getIdentifier(clipname, "raw", this.getPackageName());
-        final MediaPlayer PT1 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT2 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT3 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT4 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT5 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT6 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT7 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT8 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT9 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT10 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT11 = MediaPlayer.create(this, padTriggerClip1);
-        final MediaPlayer PT12 = MediaPlayer.create(this, padTriggerClip1);
+        String clipname1 = soundSpinner1.getSelectedItem().toString();
+
+        padTriggerClip1 = getResources().getIdentifier(soundSpinner1.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip2 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
+        padTriggerClip3 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
+
+
+//        assign buttons
+
+        PT1 = MediaPlayer.create(this, padTriggerClip1);
+        PT2 = MediaPlayer.create(this, padTriggerClip2);
+        PT3 = MediaPlayer.create(this, padTriggerClip3);
+        PT4 = MediaPlayer.create(this, padTriggerClip1);
+        PT5 = MediaPlayer.create(this, padTriggerClip1);
+        PT6 = MediaPlayer.create(this, padTriggerClip1);
+        PT7 = MediaPlayer.create(this, padTriggerClip1);
+        PT8 = MediaPlayer.create(this, padTriggerClip1);
+        PT9 = MediaPlayer.create(this, padTriggerClip1);
+        PT10 = MediaPlayer.create(this, padTriggerClip1);
+        PT11 = MediaPlayer.create(this, padTriggerClip1);
+        PT12 = MediaPlayer.create(this, padTriggerClip1);
+
         super.onCreate(savedInstanceState);
         padTrigger1 = findViewById(R.id.padTrigger1);
         padTrigger1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(true){
                 PT1.start();
                 padTrigger1.setText(getResources().getResourceEntryName(padTriggerClip1));
+                }
+                else{
+
+                }
             }
         });
         padTrigger2 = findViewById(R.id.padTrigger2);
