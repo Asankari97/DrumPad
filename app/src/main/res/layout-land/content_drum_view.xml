@@ -18,7 +18,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner1"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -30,7 +30,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger1"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner2"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -42,7 +42,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger2"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner3"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -54,7 +54,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger3"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner4"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -66,7 +66,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger4"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner5"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -78,7 +78,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger5"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner6"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -90,7 +90,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner7"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -102,7 +102,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger7"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner8"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -114,7 +114,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger8"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner9"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -126,7 +126,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger9"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner10"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -138,7 +138,7 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger10"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner11"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
 
     <Button
@@ -150,37 +150,8 @@
         android:text="@string/defaultTriggerPad"
         app:layout_constraintStart_toEndOf="@+id/padTrigger11"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner12"
-        android:background="@color/buttonColor"
+        android:background="@drawable/button_color_changer"
         android:textColor="@color/buttonTextColor"/>
-
-    <!--<ListView-->
-        <!--android:id="@+id/soundListView1"-->
-        <!--android:layout_width="112dp"-->
-        <!--android:layout_height="32dp"-->
-        <!--android:layout_marginStart="16dp"-->
-        <!--android:layout_marginTop="12dp"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--<ListView-->
-        <!--android:id="@+id/soundListView2"-->
-        <!--android:layout_width="112dp"-->
-        <!--android:layout_height="32dp"-->
-        <!--android:layout_marginStart="21dp"-->
-        <!--android:layout_marginTop="12dp"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/soundListView1"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--<ListView-->
-        <!--android:id="@+id/soundListView3"-->
-        <!--android:layout_width="112dp"-->
-        <!--android:layout_height="32dp"-->
-        <!--android:layout_marginEnd="16dp"-->
-        <!--android:layout_marginStart="18dp"-->
-        <!--android:layout_marginTop="12dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/soundListView2"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
 
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/soundSpinner1"

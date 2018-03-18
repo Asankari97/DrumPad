@@ -28,11 +28,12 @@ public class drum_view extends AppCompatActivity {
 
     int padTriggerClip1, padTriggerClip2, padTriggerClip3, padTriggerClip4, padTriggerClip5,
             padTriggerClip6, padTriggerClip7, padTriggerClip8, padTriggerClip9, padTriggerClip10,
-            padTriggerClip11 ,padTriggerClip12;
+            padTriggerClip11, padTriggerClip12;
 
     MediaPlayer PT1, PT2, PT3, PT4, PT5, PT6, PT7, PT8, PT9, PT10, PT11, PT12;
 
-    public String clipname1;
+    public String clipname1, clipname2, clipname3, clipname4, clipname5, clipname6, clipname7,
+            clipname8, clipname9, clipname10, clipname11, clipname12;
 
     Vibrator triggerPadVib;
 
@@ -40,9 +41,45 @@ public class drum_view extends AppCompatActivity {
         if (mp != null) {
             mp.stop();
             mp.release();
-            mp = null;
         }
     }
+
+    private void changeButtonColor(View v) {
+        v.setBackground(getResources().getDrawable(R.drawable.button_color_changer));
+    }
+
+    public void playSound(MediaPlayer mp, int clip, Button b, Spinner s, String name, View view){
+        stopPlaying(mp);
+        //mp = MediaPlayer.create(drum_view.this, clip);
+        if(!(name.equals(s.getSelectedItem().toString()))){
+            clip = getResources().getIdentifier(s.getSelectedItem().toString(), "raw", getPackageName());
+            mp = MediaPlayer.create(drum_view.this, clip);
+            b.setText(s.getSelectedItem().toString());
+            mp.start();
+            triggerPadVib.vibrate(50);
+            changeButtonColor(view);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release(); // finish current activity
+                }
+            });
+        }
+        else{
+            b.setText(s.getSelectedItem().toString());
+            mp = MediaPlayer.create(drum_view.this, clip);
+            mp.start();
+            triggerPadVib.vibrate(50);
+            changeButtonColor(view);
+            mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                public void onCompletion(MediaPlayer mp) {
+                    mp.release(); // finish current activity
+                }
+            });
+        }
+        b.setText(s.getSelectedItem().toString());
+    }
+
+//    Intent settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,10 +113,10 @@ public class drum_view extends AppCompatActivity {
         soundList.add("sample_11");
         soundList.add("sample_12");
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_dropdown_item_1line,
-                soundList );
+                soundList);
 
         soundSpinner1.setAdapter(arrayAdapter);
         soundSpinner2.setAdapter(arrayAdapter);
@@ -97,19 +134,30 @@ public class drum_view extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         clipname1 = soundSpinner1.getSelectedItem().toString();
+        clipname2 = soundSpinner1.getSelectedItem().toString();
+        clipname3 = soundSpinner1.getSelectedItem().toString();
+        clipname4 = soundSpinner1.getSelectedItem().toString();
+        clipname5 = soundSpinner1.getSelectedItem().toString();
+        clipname6 = soundSpinner1.getSelectedItem().toString();
+        clipname7 = soundSpinner1.getSelectedItem().toString();
+        clipname8 = soundSpinner1.getSelectedItem().toString();
+        clipname9 = soundSpinner1.getSelectedItem().toString();
+        clipname10 = soundSpinner1.getSelectedItem().toString();
+        clipname11 = soundSpinner1.getSelectedItem().toString();
+        clipname12 = soundSpinner1.getSelectedItem().toString();
 
-        padTriggerClip1 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip2 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip3 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip4 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip5 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip6 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip7 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip8 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip9 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip10 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip11 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
-        padTriggerClip12 = getResources().getIdentifier(clipname1, "raw", this.getPackageName());
+        padTriggerClip1 = getResources().getIdentifier(soundSpinner1.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip2 = getResources().getIdentifier(soundSpinner2.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip3 = getResources().getIdentifier(soundSpinner3.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip4 = getResources().getIdentifier(soundSpinner4.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip5 = getResources().getIdentifier(soundSpinner5.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip6 = getResources().getIdentifier(soundSpinner6.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip7 = getResources().getIdentifier(soundSpinner7.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip8 = getResources().getIdentifier(soundSpinner8.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip9 = getResources().getIdentifier(soundSpinner9.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip10 = getResources().getIdentifier(soundSpinner10.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip11 = getResources().getIdentifier(soundSpinner11.getSelectedItem().toString(), "raw", this.getPackageName());
+        padTriggerClip12 = getResources().getIdentifier(soundSpinner12.getSelectedItem().toString(), "raw", this.getPackageName());
 
         triggerPadVib = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
 
@@ -119,12 +167,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT1);
-                PT1 = MediaPlayer.create(drum_view.this, padTriggerClip1);
-                padTriggerClip1 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT1.start();
-                padTrigger1.setText(getResources().getResourceEntryName(padTriggerClip1));
-                triggerPadVib.vibrate(50);
+                playSound(PT1, padTriggerClip1, padTrigger1, soundSpinner1, clipname1, view);
             }
         });
 
@@ -133,12 +176,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT2);
-                PT2 = MediaPlayer.create(drum_view.this, padTriggerClip2);
-                padTriggerClip2 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT2.start();
-                padTrigger2.setText(getResources().getResourceEntryName(padTriggerClip2));
-                triggerPadVib.vibrate(50);
+                playSound(PT2, padTriggerClip2, padTrigger2, soundSpinner2, clipname2,view);
             }
         });
 
@@ -146,12 +184,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT3);
-                PT3 = MediaPlayer.create(drum_view.this, padTriggerClip3);
-                padTriggerClip3 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT3.start();
-                padTrigger3.setText(getResources().getResourceEntryName(padTriggerClip3));
-                triggerPadVib.vibrate(50);
+                playSound(PT3, padTriggerClip3, padTrigger3, soundSpinner3, clipname3, view);
             }
         });
 
@@ -159,12 +192,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT4);
-                PT4 = MediaPlayer.create(drum_view.this, padTriggerClip4);
-                padTriggerClip4 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT4.start();
-                padTrigger4.setText(getResources().getResourceEntryName(padTriggerClip4));
-                triggerPadVib.vibrate(50);
+                playSound(PT4, padTriggerClip4, padTrigger4, soundSpinner4, clipname4, view);
             }
         });
 
@@ -172,12 +200,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT5);
-                PT5 = MediaPlayer.create(drum_view.this, padTriggerClip5);
-                padTriggerClip5 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT5.start();
-                padTrigger5.setText(getResources().getResourceEntryName(padTriggerClip5));
-                triggerPadVib.vibrate(50);
+                playSound(PT5, padTriggerClip5, padTrigger5, soundSpinner5, clipname5, view);
             }
         });
 
@@ -185,12 +208,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT6);
-                PT6 = MediaPlayer.create(drum_view.this, padTriggerClip6);
-                padTriggerClip6 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT6.start();
-                padTrigger6.setText(getResources().getResourceEntryName(padTriggerClip6));
-                triggerPadVib.vibrate(50);
+                playSound(PT6, padTriggerClip6, padTrigger6, soundSpinner6, clipname6, view);
             }
         });
 
@@ -198,12 +216,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT7);
-                PT7 = MediaPlayer.create(drum_view.this, padTriggerClip7);
-                padTriggerClip7 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT7.start();
-                padTrigger7.setText(getResources().getResourceEntryName(padTriggerClip7));
-                triggerPadVib.vibrate(50);
+                playSound(PT7, padTriggerClip7, padTrigger7, soundSpinner7, clipname7, view);
             }
         });
 
@@ -211,12 +224,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT8);
-                PT8 = MediaPlayer.create(drum_view.this, padTriggerClip8);
-                padTriggerClip8 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT8.start();
-                padTrigger8.setText(getResources().getResourceEntryName(padTriggerClip8));
-                triggerPadVib.vibrate(50);
+                playSound(PT8, padTriggerClip8, padTrigger8, soundSpinner8, clipname8, view);
             }
         });
 
@@ -224,12 +232,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT9);
-                PT9 = MediaPlayer.create(drum_view.this, padTriggerClip9);
-                padTriggerClip9 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT9.start();
-                padTrigger9.setText(getResources().getResourceEntryName(padTriggerClip9));
-                triggerPadVib.vibrate(50);
+                playSound(PT9, padTriggerClip9, padTrigger9, soundSpinner9, clipname9, view);
             }
         });
 
@@ -237,12 +240,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT10);
-                PT10 = MediaPlayer.create(drum_view.this, padTriggerClip10);
-                padTriggerClip10 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT10.start();
-                padTrigger10.setText(getResources().getResourceEntryName(padTriggerClip10));
-                triggerPadVib.vibrate(50);
+                playSound(PT10, padTriggerClip10, padTrigger10, soundSpinner10, clipname10, view);
             }
         });
 
@@ -250,12 +248,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT11);
-                PT11 = MediaPlayer.create(drum_view.this, padTriggerClip11);
-                padTriggerClip11 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT11.start();
-                padTrigger11.setText(getResources().getResourceEntryName(padTriggerClip11));
-                triggerPadVib.vibrate(50);
+                playSound(PT11, padTriggerClip11, padTrigger11, soundSpinner11, clipname11, view);
             }
         });
 
@@ -263,12 +256,7 @@ public class drum_view extends AppCompatActivity {
         padTrigger12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                stopPlaying(PT12);
-                PT12 = MediaPlayer.create(drum_view.this, padTriggerClip12);
-                padTriggerClip12 = getResources().getIdentifier(clipname1, "raw", getPackageName());
-                PT12.start();
-                padTrigger12.setText(getResources().getResourceEntryName(padTriggerClip12));
-                triggerPadVib.vibrate(50);
+                playSound(PT12, padTriggerClip12, padTrigger12, soundSpinner12, clipname12, view);
             }
         });
     }
