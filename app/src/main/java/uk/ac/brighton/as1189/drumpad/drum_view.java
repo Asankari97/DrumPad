@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,21 +16,21 @@ import java.util.List;
 
 public class drum_view extends AppCompatActivity {
 
-    public Button padTrigger1, padTrigger2, padTrigger3, padTrigger4,
+    private Button padTrigger1, padTrigger2, padTrigger3, padTrigger4,
             padTrigger5, padTrigger6, padTrigger7, padTrigger8, padTrigger9,
             padTrigger10, padTrigger11, padTrigger12;
 
-    public Spinner soundSpinner1, soundSpinner2, soundSpinner3, soundSpinner4, soundSpinner5,
+    private Spinner soundSpinner1, soundSpinner2, soundSpinner3, soundSpinner4, soundSpinner5,
             soundSpinner6, soundSpinner7, soundSpinner8, soundSpinner9, soundSpinner10,
             soundSpinner11, soundSpinner12;
 
-    int padTriggerClip1, padTriggerClip2, padTriggerClip3, padTriggerClip4, padTriggerClip5,
+    private int padTriggerClip1, padTriggerClip2, padTriggerClip3, padTriggerClip4, padTriggerClip5,
             padTriggerClip6, padTriggerClip7, padTriggerClip8, padTriggerClip9, padTriggerClip10,
             padTriggerClip11, padTriggerClip12;
 
     MediaPlayer PT1, PT2, PT3, PT4, PT5, PT6, PT7, PT8, PT9, PT10, PT11, PT12;
 
-    public String clipname1, clipname2, clipname3, clipname4, clipname5, clipname6, clipname7,
+    private String clipname1, clipname2, clipname3, clipname4, clipname5, clipname6, clipname7,
             clipname8, clipname9, clipname10, clipname11, clipname12;
 
     Vibrator triggerPadVib;
@@ -48,7 +46,7 @@ public class drum_view extends AppCompatActivity {
         v.setBackground(getResources().getDrawable(R.drawable.button_color_changer));
     }
 
-    public void playSound(MediaPlayer mp, int clip, Button b, Spinner s, String name, View view){
+    private void playSound(MediaPlayer mp, int clip, Button b, Spinner s, String name, View view){
         stopPlaying(mp);
         //mp = MediaPlayer.create(drum_view.this, clip);
         if(!(name.equals(s.getSelectedItem().toString()))){
@@ -78,8 +76,6 @@ public class drum_view extends AppCompatActivity {
         }
         b.setText(s.getSelectedItem().toString());
     }
-
-//    Intent settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -261,25 +257,25 @@ public class drum_view extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_drum_view, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_drum_view, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
 }
