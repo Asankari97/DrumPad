@@ -48,7 +48,6 @@ public class drum_view extends AppCompatActivity {
 
     private void playSound(MediaPlayer mp, int clip, Button b, Spinner s, String name, View view){
         stopPlaying(mp);
-        //mp = MediaPlayer.create(drum_view.this, clip);
         if(!(name.equals(s.getSelectedItem().toString()))){
             clip = getResources().getIdentifier(s.getSelectedItem().toString(), "raw", getPackageName());
             mp = MediaPlayer.create(drum_view.this, clip);
@@ -123,7 +122,7 @@ public class drum_view extends AppCompatActivity {
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this,
-                android.R.layout.simple_dropdown_item_1line,
+                android.R.layout.simple_spinner_dropdown_item,
                 soundList);
 
         soundSpinner1.setAdapter(arrayAdapter);
