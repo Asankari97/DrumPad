@@ -108,6 +108,18 @@ public class drum_view extends AppCompatActivity {
         soundList.add("sample_10");
         soundList.add("sample_11");
         soundList.add("sample_12");
+        soundList.add("kick_1");
+        soundList.add("snare_1");
+        soundList.add("clap_1");
+        soundList.add("closed_hat_1");
+        soundList.add("open_hat_1");
+        soundList.add("percussion_1");
+        soundList.add("kick_2");
+        soundList.add("snare_2");
+        soundList.add("clap_2");
+        soundList.add("closed_hat_2");
+        soundList.add("open_hat_2");
+        soundList.add("percussion_2");
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this,
