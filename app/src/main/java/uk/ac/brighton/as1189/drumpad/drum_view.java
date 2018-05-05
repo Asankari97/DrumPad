@@ -33,6 +33,8 @@ public class drum_view extends AppCompatActivity {
     private String clipname1, clipname2, clipname3, clipname4, clipname5, clipname6, clipname7,
             clipname8, clipname9, clipname10, clipname11, clipname12;
 
+    List<String> soundList;
+
     Vibrator triggerPadVib;
 
     private void stopPlaying(MediaPlayer mp) {
@@ -94,7 +96,7 @@ public class drum_view extends AppCompatActivity {
         soundSpinner11 = findViewById(R.id.soundSpinner11);
         soundSpinner12 = findViewById(R.id.soundSpinner12);
 
-        List<String> soundList = new ArrayList<>();
+        soundList = new ArrayList<>();
         soundList.add("sample_1");
         soundList.add("sample_2");
         soundList.add("sample_3");
@@ -268,25 +270,4 @@ public class drum_view extends AppCompatActivity {
         });
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_drum_view, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }

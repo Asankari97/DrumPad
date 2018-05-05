@@ -11,10 +11,10 @@
 
     <Button
         android:id="@+id/padTrigger1"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -23,10 +23,10 @@
 
     <Button
         android:id="@+id/padTrigger2"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -35,10 +35,10 @@
 
     <Button
         android:id="@+id/padTrigger3"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -47,22 +47,22 @@
 
     <Button
         android:id="@+id/padTrigger4"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
-        app:layout_constraintStart_toEndOf="@+id/padTrigger3"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner4" />
 
     <Button
         android:id="@+id/padTrigger5"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -71,10 +71,10 @@
 
     <Button
         android:id="@+id/padTrigger6"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -83,10 +83,10 @@
 
     <Button
         android:id="@+id/padTrigger7"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -95,10 +95,10 @@
 
     <Button
         android:id="@+id/padTrigger8"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -107,10 +107,10 @@
 
     <Button
         android:id="@+id/padTrigger9"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -119,22 +119,22 @@
 
     <Button
         android:id="@+id/padTrigger10"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
-        app:layout_constraintStart_toEndOf="@+id/padTrigger9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner10" />
 
     <Button
         android:id="@+id/padTrigger11"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
@@ -143,133 +143,123 @@
 
     <Button
         android:id="@+id/padTrigger12"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_color_changer"
         android:text="@string/defaultTriggerPad"
         android:textColor="@color/buttonTextColor"
         app:layout_constraintStart_toEndOf="@+id/padTrigger11"
         app:layout_constraintTop_toBottomOf="@+id/soundSpinner12" />
 
+
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/soundSpinner1"
-        android:layout_width="76dp"
+        android:layout_width="112dp"
         android:layout_height="32dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/soundSpinner2"
-        android:layout_width="76dp"
+        android:layout_width="112dp"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/soundSpinner1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/soundSpinner3"
-        android:layout_width="76dp"
+        android:layout_width="112dp"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/soundSpinner2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/soundSpinner4"
-        android:layout_width="76dp"
+        android:layout_width="112dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner3"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner5"
-        android:layout_width="76dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner4"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner6"
-        android:layout_width="76dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner5"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner7"
-        android:layout_width="76dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="16dp"
-        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/padTrigger1" />
 
     <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner8"
-        android:layout_width="76dp"
+        android:id="@+id/soundSpinner5"
+        android:layout_width="112dp"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner7"
+        app:layout_constraintStart_toEndOf="@+id/soundSpinner4"
         app:layout_constraintTop_toBottomOf="@+id/padTrigger2" />
 
     <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner9"
-        android:layout_width="76dp"
+        android:id="@+id/soundSpinner6"
+        android:layout_width="112dp"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner8"
+        app:layout_constraintStart_toEndOf="@+id/soundSpinner5"
         app:layout_constraintTop_toBottomOf="@+id/padTrigger3" />
 
     <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner10"
-        android:layout_width="76dp"
+        android:id="@+id/soundSpinner7"
+        android:layout_width="112dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/padTrigger4" />
 
     <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner11"
-        android:layout_width="76dp"
+        android:id="@+id/soundSpinner8"
+        android:layout_width="112dp"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
-        app:layout_constraintStart_toEndOf="@+id/soundSpinner10"
+        app:layout_constraintStart_toEndOf="@+id/soundSpinner7"
         app:layout_constraintTop_toBottomOf="@+id/padTrigger5" />
 
     <android.support.v7.widget.AppCompatSpinner
-        android:id="@+id/soundSpinner12"
-        android:layout_width="76dp"
+        android:id="@+id/soundSpinner9"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/soundSpinner8"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger6" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/soundSpinner10"
+        android:layout_width="112dp"
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger7" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/soundSpinner11"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/soundSpinner10"
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger8" />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/soundSpinner12"
+        android:layout_width="112dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/soundSpinner11"
-        app:layout_constraintTop_toBottomOf="@+id/padTrigger6" />
+        app:layout_constraintTop_toBottomOf="@+id/padTrigger9" />
+
 </android.support.constraint.ConstraintLayout>
